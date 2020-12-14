@@ -3,26 +3,12 @@
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     </head>
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
 
     <body style='margin : 0px; overflow: hidden;'>
-      <div>1.0.1</div>
-        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-
-        <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/CiroAngeleri/AR-PWA-Christmas-Tree/master/scene.gltf"></a-asset-item>
-        </a-assets>
-
-        <a-marker type='barcode' value='7'>
-          <a-entity 
-          gltf-model="url(https://raw.githubusercontent.com/CiroAngeleri/AR-PWA-Christmas-Tree/master/scene.gltf)">
-          </a-entity>
-        </a-marker>
-
-        <a-entity camera></a-entity>
-        </a-scene>
+      <model-viewer src="https://cdn.glitch.com/ea8aad0f-c4ad-4fee-b2aa-0174986b2895%2Fchair.glb?v=1569230891112"
+      ios-src="https://github.com/Giorat/dope-chair-model-viewer/raw/master/model/chair.usdz"
+      alt="a 3D model of a chair" auto-rotate camera-controls background-color="#ffffff" ar magic-leap unstable-webxr>
+      </model-viewer>
     </body>
 </html>
